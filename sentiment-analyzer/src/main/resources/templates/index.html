@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>智能情感分析器</title>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 50px auto; }
+        textarea { width: 100%; height: 100px; }
+        button { padding: 10px 20px; }
+        .result { margin-top: 20px; padding: 15px; border: 1px solid #ccc; background-color: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <h1>智能情感分析器</h1>
+    <p>请输入一段英文影评，我们将分析它的情感色彩。</p>
+
+    <form action="#" th:action="@{/analyze}" method="post">
+        <textarea name="reviewText" placeholder="e.g., This movie was fantastic!"></textarea>
+        <br><br>
+        <button type="submit">开始分析</button>
+    </form>
+
+    <div th:if="${sentimentResult}" class="result">
+        <h2>分析结果: <span th:text="${sentimentResult}"></span></h2>
+    </div>
+</body>
+</html>
