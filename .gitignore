@@ -1,0 +1,19 @@
+# Java / Maven
+/sentiment-analyzer/target/
+/sentiment-analyzer/.classpath
+/sentiment-analyzer/.project
+/sentiment-analyzer/.settings/
+/sentiment-analyzer/*.iml
+
+# Python
+/ai-service/venv/
+/ai-service/__pycache__/
+/ai-service/*.pyc
+/ai-service/sentiment_model.pkl
+/ai-service/vectorizer.pkl
+/ai-service/IMDB Dataset.csv
+
+# IDE files
+.idea/
+.vscode/
+*.log
